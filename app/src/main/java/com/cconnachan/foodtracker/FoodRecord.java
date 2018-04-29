@@ -1,13 +1,16 @@
 package com.cconnachan.foodtracker;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class FoodRecord {
 
     private ArrayList<Food> loggedFood;
+    private HashMap<MealType, Integer> loggedMeals;
 
     public FoodRecord(){
         this.loggedFood = new ArrayList<Food>();
+        this.loggedMeals = new HashMap<>();
     }
 
     public ArrayList<Food> getLoggedFood() {
@@ -33,5 +36,39 @@ public class FoodRecord {
         loggedFood = newLoggedFood;
     }
 
+    public HashMap<MealType, Integer> getLoggedMeals(ArrayList<Food> foodToCount) {
+        HashMap<MealType, Integer> loggedMeals = new HashMap<>();
+        Integer breakfast = 0;
+        Integer lunch = 0;
+        Integer dinner = 0;
+        Integer supper = 0;
+        Integer snack = 0;
 
+        for (Food food : foodToCount){
+            if (food.getMealType() == MealType.BREAKFAST){
+                breakfast += 1;
+            } else if (food.getMealType() == MealType.LUNCH) {
+                lunch += 1;
+            } else if (food.getMealType() == MealType.DINNER){
+                dinner += 1;
+            } else if (food.getMealType() == MealType.SUPPER) {
+                supper += 1;
+            } else if (food.getMealType() == MealType.SNACK){
+                snack += 1;
+            }
+        }
+
+        loggedMeals.put(MealType.BREAKFAST, breakfast);
+        loggedMeals.put(MealType.LUNCH, lunch);
+        loggedMeals.put(MealType.DINNER, dinner);
+        loggedMeals.put(MealType.SUPPER, supper);
+        loggedMeals.put(MealType.SNACK, snack);
+
+        this.loggedMeals = loggedMeals;
+        return this.loggedMeals;
+    }
+
+//    public HashMap<MealType, Integer> getLoggedMeals() {
+//        return loggedMeals;
+//    }
 }

@@ -13,13 +13,24 @@ public class FoodRecordTest {
     private Food chips;
     private Food cucumber;
     private Food anotherChips;
+    private Food pizza;
+    private Food sandwich;
+    private FoodRecord fullFoodRecord;
 
     @Before
     public void setup(){
         recordedFood = new FoodRecord();
         chips = new Food("chips", "15/03/2018", MealType.DINNER);
+        pizza = new Food("pizza", "20/04/2018", MealType.DINNER);
+        sandwich = new Food("sandwich", "03/03/2018", MealType.LUNCH);
         anotherChips = new Food("chips", "12/12/2017", MealType.BREAKFAST);
         cucumber = new Food("cucumber", "01/01/2018", MealType.SNACK);
+        fullFoodRecord = new FoodRecord();
+        fullFoodRecord.addFood(chips);
+        fullFoodRecord.addFood(anotherChips);
+        fullFoodRecord.addFood(pizza);
+        fullFoodRecord.addFood(sandwich);
+        fullFoodRecord.addFood(cucumber);
     }
 
     @Test
@@ -58,5 +69,11 @@ public class FoodRecordTest {
         recordedFood.removeFood(chips);
         recordedFood.removeFood(cucumber);
         assertEquals(1, recordedFood.totalLogged());
+    }
+
+    @Test
+    public void canCountFoodLogged(){
+        assertEquals(5, fullFoodRecord.getLoggedMeals(fullFoodRecord.getLoggedFood()).size());
+
     }
 }
