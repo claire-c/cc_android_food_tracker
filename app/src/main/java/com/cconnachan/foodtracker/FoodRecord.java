@@ -18,5 +18,9 @@ public class FoodRecord {
         loggedFood.add(foodToAdd);
     }
 
+    public int totalLogged(){
+        return loggedFood.size();
+    }
+
 
 }
