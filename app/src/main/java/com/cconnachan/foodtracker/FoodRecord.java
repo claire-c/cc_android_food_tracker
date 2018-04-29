@@ -68,7 +68,31 @@ public class FoodRecord {
         return this.loggedMeals;
     }
 
-//    public HashMap<MealType, Integer> getLoggedMeals() {
-//        return loggedMeals;
-//    }
+
+    public Integer getBreakfastTotal(){
+        getLoggedMeals(loggedFood);
+        return loggedMeals.get(MealType.BREAKFAST);
+    }
+
+    public Integer getLunchTotal(){
+        getLoggedMeals(loggedFood);
+        return loggedMeals.get(MealType.LUNCH);
+    }
+
+    public Integer getDinnerTotal(){
+        getLoggedMeals(loggedFood);
+        return loggedMeals.get(MealType.DINNER);
+    }
+
+    public Integer getSupperTotal(){
+        getLoggedMeals(loggedFood);
+        return loggedMeals.get(MealType.SUPPER);
+    }
+
+    public Integer getSnackTotal(){
+        getLoggedMeals(loggedFood);
+        return loggedMeals.get(MealType.SNACK);
+    }
+
+
 }

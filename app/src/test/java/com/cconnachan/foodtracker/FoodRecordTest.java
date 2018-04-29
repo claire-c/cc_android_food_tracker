@@ -74,6 +74,31 @@ public class FoodRecordTest {
     @Test
     public void canCountFoodLogged(){
         assertEquals(5, fullFoodRecord.getLoggedMeals(fullFoodRecord.getLoggedFood()).size());
-
     }
+
+    @Test
+    public void canCountTotalBreakfastItemsLogged(){
+        assertEquals((Integer) 1, fullFoodRecord.getBreakfastTotal());
+    }
+
+    @Test
+    public void canCountTotalLunchItemsLogged(){
+        assertEquals((Integer) 1, fullFoodRecord.getLunchTotal());
+    }
+
+    @Test
+    public void canCountTotalDinnerItemsLogged(){
+        assertEquals((Integer) 2, fullFoodRecord.getDinnerTotal());
+    }
+
+    @Test
+    public void canCountTotalSupperItemsLogged(){
+        assertEquals((Integer) 0, fullFoodRecord.getSupperTotal());
+    }
+
+    @Test
+    public void canCountTotalSnackItemsLogged(){
+        assertEquals((Integer) 1, fullFoodRecord.getSnackTotal());
+    }
+
 }
