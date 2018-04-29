@@ -31,7 +31,7 @@ public class FoodTest {
 
     @Test
     public void canGetdate(){
-        assertEquals((Date) Thu Mar 15 00:00:00 GMT 2018, chips.getDate());
+        assertEquals("Thu Mar 15 00:00:00 GMT 2018", chips.getDate().toString());
     }
 
 
