@@ -22,5 +22,15 @@ public class FoodRecord {
         return loggedFood.size();
     }
 
+    public void removeFood(Food foodToRemove){
+        ArrayList<Food> newLoggedFood = new ArrayList<>();
+        for(Food food : loggedFood ){
+            if(!food.equals(foodToRemove)){
+                newLoggedFood.add(food);
+            }
+        }
+        loggedFood = newLoggedFood;
+    }
+
 
 }
