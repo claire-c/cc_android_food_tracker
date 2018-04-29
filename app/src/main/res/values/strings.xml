@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">FoodTracker</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_add_food">Add Food</string>
+    <string name="title_food_list">Food log</string>
+    <string name="title_select_dates">Select Dates</string>
 </resources>

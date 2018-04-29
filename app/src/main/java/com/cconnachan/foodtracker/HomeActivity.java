@@ -20,11 +20,14 @@ public class HomeActivity extends AppCompatActivity {
                 case R.id.navigation_home:
                     mTextMessage.setText(R.string.title_home);
                     return true;
-                case R.id.navigation_dashboard:
-                    mTextMessage.setText(R.string.title_dashboard);
+                case R.id.navigation_add:
+                    mTextMessage.setText(R.string.title_add_food);
                     return true;
-                case R.id.navigation_notifications:
-                    mTextMessage.setText(R.string.title_notifications);
+                case R.id.navigation_foodlist:
+                    mTextMessage.setText(R.string.title_food_list);
+                    return true;
+                case R.id.navigation_selectdates:
+                    mTextMessage.setText(R.string.title_select_dates);
                     return true;
             }
             return false;

@@ -22,6 +22,7 @@ public class FoodRecord {
         return loggedFood.size();
     }
 
+    //This is reliant on passing in the same object that has been logged. Not sure if I will need to refactor this?
     public void removeFood(Food foodToRemove){
         ArrayList<Food> newLoggedFood = new ArrayList<>();
         for(Food food : loggedFood ){
