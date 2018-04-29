@@ -2,6 +2,6 @@
     <string name="app_name">FoodTracker</string>
     <string name="title_home">Home</string>
     <string name="title_add_food">Add Food</string>
-    <string name="title_food_list">Food log</string>
-    <string name="title_select_dates">Select Dates</string>
+    <string name="title_food_list">Food Log</string>
+    <string name="title_select_dates">Select</string>
 </resources>
